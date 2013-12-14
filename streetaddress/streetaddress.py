@@ -64,8 +64,8 @@ class StreetAddressParser():
                 # Get the block number from the street, assuming that house is an integer
                 try:
                     res['block'] = unicode(int(math.floor(float(res['house']) / 100.) * 100))
-                except Exception as ex:
-                    res['block'] = None
+                except (ValueError, TypeError):
+                    pass
             else:
                 #no house number
                 start_idx = 0
