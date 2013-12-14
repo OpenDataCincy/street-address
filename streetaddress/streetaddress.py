@@ -58,6 +58,12 @@ class StreetAddressParser():
             elif self.rec_house_number.search(tokens[0]):
                 res['house'] = tokens[0] 
                 start_idx = 1
+
+                # Get the block number from the street, assuming that house is an integer
+                try:
+                    res['block'] = unicode(int(math.floor(float(res['house']) / 100.) * 100))
+                except Exception as ex:
+                    res['block'] = None
             else:
                 #no house number
                 start_idx = 0
