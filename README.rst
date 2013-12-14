@@ -26,6 +26,7 @@ Usage
 
     addr = addr_parser.parse("1600 Pennsylvania Ave")
     print addr['house'] #1600
+    print addr['block'] #1600
     print addr['street_full'] #Pennsylvania Ave
     print addr['street_name'] #Pennsylvania
     print addr['street_type'] #Ave

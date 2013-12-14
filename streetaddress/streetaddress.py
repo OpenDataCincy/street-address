@@ -33,6 +33,7 @@ class StreetAddressParser():
         addr_str = addr_str.strip()
         res = {
                 'house' : None,
+                'block': None,
                 'street_name' : None,
                 'street_type' : None,
                 'street_full' : None,
